@@ -414,6 +414,36 @@ List comprehensions are a powerful way of succinctly creating new lists. But be
 responsible; if you find you’re doing something complicated, it’s probably 
 better to write a full `for` loop.
 
+## List operations
+
+Python also provides list methods that use familiar syntax.
+
+The `+` operator is used to concatenate two lists.
+
+```python
+>>> [1, 2, 3] + [4, 5, 6]
+[1, 2, 3, 4, 5, 6]
+>>> [1, 2, 3] + []
+[1, 2, 3]
+```
+
+The `*` operator is used to make copies of elements inside a list.
+
+```python
+>>> [1, 2, 3] * 3
+[1, 2, 3, 1, 2, 3, 1, 2, 3]
+>>> [1, 2, 3] * 1
+[1, 2, 3]
+>>> [1, 2, 3] * 0
+[]
+>>> [] * 3
+[]
+```
+
+This behavior for `*` may be somewhat unintuitive, especially if you are thinking of lists like vectors or matricies, so keep it in mind when debugging your code.
+
+Libraries like numpy provide array and matrix objects on which the `*` operator behaves as mathematically expected. Information about using modules and libraries is covered in the Modules section of this Python tutorial.
+
 ## Tuples
 
 A close relative of lists are tuples, which differ in that they cannot be 
